@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logiciel OOF - Connexion</title
+</head>
+<body>
+<p class="title">Veuillez taper le code :</p>
+<div>
+<input id="code" type="text" />
+<br><br>
+<button id="check" onclick="check()">Valider</button>
+</div>
+<style>
+div, #code {
+	text-align: center;
+}
+.title, #check {
+	font-size: 63pt;
+	text-align: center;
+}
+#code {
+	font-size: 142pt;
+	border-bottom: 5px solid #000;
+	width: 500px;
+	font-family: monospace;
+}
+#check {
+	border: 2px solid #000;
+}
+</style>
+<script>
+function check() {
+	if (document.getElementById("code").value == "639") {
+		document.getElementsByClassName("title")[0].innerHTML = "Le code est valide ! Redirection en cours..."
+		setTimeout(function(){
+			window.location = "data/soft.html"
+		}, 5000)
+	} else {
+		document.getElementsByClassName("title")[0].innerHTML = "Le code est invalide ! Veuillez réessayer..."
+	}
+}
+</script>
+</body>
+</html>
