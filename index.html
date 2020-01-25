@@ -4,7 +4,7 @@
 	<title>Logiciel OOF - Connexion</title
 </head>
 <body>
-<p class="title">Veuillez taper le code :</p>
+<p class="title">Veuillez taper le code de votre compte:</p>
 <div>
 <input id="code" type="text" />
 <br><br>
@@ -19,24 +19,41 @@ div, #code {
 	text-align: center;
 }
 #code {
-	font-size: 142pt;
+	font-size: 52pt;
 	border-bottom: 5px solid #000;
-	width: 500px;
+	width: 900px;
 	font-family: monospace;
 }
 #check {
 	border: 2px solid #000;
 }
 </style>
+<script src="data/md5.min.js"></script>
 <script>
 function check() {
-	if (document.getElementById("code").value == "639") {
-		document.getElementsByClassName("title")[0].innerHTML = "Le code est valide ! Redirection en cours..."
-		setTimeout(function(){
-			window.location = "data/soft.html"
-		}, 5000)
-	} else {
-		document.getElementsByClassName("title")[0].innerHTML = "Le code est invalide ! Veuillez réessayer..."
+	var code = md5(document.getElementById("code").value);
+	console.log(code, document.getElementById("code").value)
+	switch(code) {
+	case "fe9d7483033a72e74f35722a2b6176b5":
+		document.getElementsByClassName("title")[0].innerHTML = "Bonjour, Triplex !"
+		break;
+	case "b74df323e3939b563635a2cba7a7afba":
+		document.getElementsByClassName("title")[0].innerHTML = "Bonjour, MA !<br>Vous possédez 1 wilex !"
+		break;
+	case "3b864efcf855b6d5e8e6294e1c817b1c":
+		document.getElementsByClassName("title")[0].innerHTML = "Bonjour, super maman !<br>Vous possédez 0.58 wilex !"
+		break;
+	case "6f7f3b0fb100c0b0fb21a0287cd72f7b":
+		document.getElementsByClassName("title")[0].innerHTML = "Bonjour, jos !<br>Vous possédez 2 wilex !"
+		break;
+	case "e430f3cfce31c5633508c9ec5dde49e0":
+		document.getElementsByClassName("title")[0].innerHTML = "Bonjour, pixel_gaming !<br>Vous possédez 2.85 wilex !"
+		break;
+	case "33ad8e516d70b4ee7fd82dff20652e16":
+		document.getElementsByClassName("title")[0].innerHTML = "Bonjour, fral !<br>Vous possédez 0.33 wilex !"
+		break;
+	default:
+		document.getElementsByClassName("title")[0].innerHTML = "Le code est invalide ! <br>Créez-vous un compte pour 2€ !"
 	}
 }
 </script>

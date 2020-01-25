@@ -4,7 +4,15 @@
 	<title>Logiciel OOF - Alesis QX49</title
 </head>
 <body>
-<img src="QX49.jpg" />
-<img src="oof.png" />
+<input id="code" type="text" />
+<br><br>
+<button id="check" onclick="check()">Valider</button>
+<script src="md5.min.js"></script>
+<script>
+function check() {
+	var hash = md5(document.getElementById("code").value);
+	document.write(hash);
+}
+</script>
 </body>
 </html>
