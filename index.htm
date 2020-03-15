@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Calculateur de coordonnées Minecraft</title>
+    <script src="js.js" charset="utf-8"></script>
+    <!--In this html page, we will get the coordinates of the client, and his destination by number input -->
   </head>
-  <body>
-  <!--In this html page, we will get the coordinates of the client, and his destination by number input -->
-  Entrez vos coordonnées X: <input type="number" id="x"><br>
-  Entrez vos coordonnées Z: <input type="number" id="z"><br>
-  Entrez les coordonnées X de votre destination: <input type="number" id="dx"><br>
-  Entrez les coordonnées Z de votre destination: <input type="number" id="dz"><br>
-  <button onclick="calc()">Calculer</button>
+  <body id="body">
+  Enter your X coordinates: <input type="number" id="x"><br>
+  Enter your Z coordinate : <input type="number" id="z"><br>
+  Enter your X destination coordinates: <input type="number" id="dx"><br>
+  Enter your Z destination coordinates: <input type="number" id="dz"><br>
+  <button onclick="calc()">Estimate</button>
   <p id="result"></p>
-  <script src="js.js" charset="utf-8"></script>
   </body>
 </html>
