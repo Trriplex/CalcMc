@@ -18,7 +18,7 @@ To calculate the distance, the program will use the Pythagorean theorem:
 
 ![py](http://www.sciweavers.org/upload/Tex2Img_1584285027/render.png)
 
-But, to calculate the angle, this is a little bit more complex: here, we will use an arctangent of a tangent, we know the tangent: in trigonometry, the tangent is the opposite side of the angle divide by the adjacent side of the angle. the opposite side is dx-x, and the adjacent side is dz-z. And, because the javascript function return a radiant value, we will convert it into degrees by a litte formula: 180 divided py the number PI. Finally, we have this formula:
+But, to calculate the angle, this is a little bit more complex: here, we will use an arctangent of a tangent, we know the tangent: in trigonometry, the tangent is the opposite side of the angle divide by the adjacent side of the angle. the opposite side is dx-x, and the adjacent side is dz-z. And, because the javascript function return a radiant value, we will convert it into degrees by a litte formula: 180 divided by the number PI. Finally, we have this formula:
 
 ![ac](http://www.sciweavers.org/upload/Tex2Img_1584285430/render.png)
 
