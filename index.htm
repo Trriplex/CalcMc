@@ -2,16 +2,41 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Calculateur de coordonnées Minecraft</title>
+    <title>Minecraft coordinates calculator</title>
     <script src="js.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css.css">
     <!--In this html page, we will get the coordinates of the client, and his destination by number input -->
   </head>
   <body id="body">
-  Enter your X coordinates: <input type="number" id="x"><br>
-  Enter your Z coordinate : <input type="number" id="z"><br>
-  Enter your X destination coordinates: <input type="number" id="dx"><br>
-  Enter your Z destination coordinates: <input type="number" id="dz"><br>
-  <button onclick="calc()">Estimate</button>
+  <h1>CalcMc</h1>
+  <h2>A simple Minecraft position/destination calculator</h2>
+  <main>
+    <div class="left">
+      <h2>Your actual position</h2>
+      Enter your <b>X coordinates</b>: <input type="number" id="x"><br><br>
+      Enter your <b>Z coordinate</b>: <input type="number" id="z">
+    </div>
+    <div class="right">
+      <h2>Your destination</h2>
+      Enter your <b>X destination coordinates</b>: <input type="number" id="dx"><br><br>
+      Enter your <b>Z destination coordinates</b>: <input type="number" id="dz">
+    </div>
+  </main>
+  <div class="btn"><button onclick="calc()">Estimate</button></div>
+  <script>
+  function show(df, r){document.getElementById('result').innerHTML = 'To get to this destination, you will have to:<br>1. orient yourself by <b>'+Math.round(df*10)/10+' degrees</b><br>2. Travel <b>'+r+' blocks</b>'};
+  window.onload = function() {
+    var supportedlangs = "fr,en";
+    var userlang = (navigator.userLanguage||navigator.language).substr(0,2);
+    var ifmatch = new RegExp(userlang)
+    if (ifmatch) {
+      switch (userlang) {
+        case 'fr':
+          window.location.href = window.location.href.replace("index.htm","")+"/fr/index.htm";
+      }
+    }
+  }
+  </script>
   <p id="result"></p>
   </body>
 </html>
