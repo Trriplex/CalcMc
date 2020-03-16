@@ -1,12 +1,3 @@
-window.onload = function() {
-  var lang = (navigator.userLanguage || navigator.language).substr(0,2);
-  if (lang == "fr") {
-    document.getElementsByTagName('body')[0].innerHTML = 'Entrez vos coordonnées X: <input type="number" id="x"><br>Entrer vos coordonnées Z: <input type="number" id="z"><br>Entrer vos coordonnées X de destination: <input type="number" id="dx"><br>Entrez vos coordonnées Z de destination: <input type="number" id="dz"><br><button onclick="calc()">Estimer</button><p id="result"></p>';
-    window.st = ["Pour vous rendre à cette destination, vous allez devoir vous orienter à "," degrés puis parcourir "," blocs."];
-  } else {
-    window.st = ["To get to this destination, you will have to orient yourself by "," degrees and then go through "," blocks."];
-  }
-}
 function calc() {
   //Here, we get all the input element from the index.htm file
   var x = Number(document.getElementById('x').value);
@@ -28,5 +19,5 @@ function calc() {
     df = 0-df;
   }
   //Finally, we will show the message to the client, we round up the value of the angle to 1/10th
-  document.getElementById('result').innerHTML = st[0]+Math.round(df*10)/10+st[1]+r+st[2];
+  show(df, r);
 }
