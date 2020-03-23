@@ -16,11 +16,11 @@ To calculate those things, this program will use 4 variables:
 
 To calculate the distance, the program will use the Pythagorean theorem:
 
-![py](http://www.sciweavers.org/upload/Tex2Img_1584285027/render.png)
+![imgur link](https://i.imgur.com/7AnsgCk.png)
 
 But, to calculate the angle, this is a little bit more complex: here, we will use an arctangent of a tangent, we know the tangent: in trigonometry, the tangent is the opposite side of the angle divide by the adjacent side of the angle. the opposite side is dx-x, and the adjacent side is dz-z. And, because the javascript function return a radiant value, we will convert it into degrees by a litte formula: 180 divided by the number PI. Finally, we have this formula:
 
-![ac](http://www.sciweavers.org/upload/Tex2Img_1584285430/render.png)
+![imgur link](https://i.imgur.com/oGdxU5R.png)
 
 After all those calculations, we need to convert the value of the angle for Minecraft, beacause the minecraft dimension is not like this:
 
