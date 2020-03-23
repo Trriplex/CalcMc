@@ -1,6 +1,7 @@
 # CalcMc
 Hosted [on a github page](https://terminator8989.github.io),
-CalcMc is a tool for Minecraft that will calculate the shortest way to reach a destination. The page is auto-translated in French 🇫🇷, if it detect the french language on the navigator
+CalcMc is a tool for Minecraft that will calculate the shortest way to reach a destination, just by enter your actual minecraft position in your world and your destination position
+
 ### How to use it ?
 CalcMc will give you two things:
 1. At how many degrees you will to orient your minecraft skin to the right direction
