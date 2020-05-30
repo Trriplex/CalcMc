@@ -34,17 +34,6 @@
   <div class="btn"><button onclick="calc()">Estimate</button></div>
   <script>
   function show(df, r){document.getElementById('result').innerHTML = 'To get to this destination, you will have to:<br>1. orient yourself by <b>'+Math.round(df*10)/10+' degrees</b><br>2. Travel <b>'+r+' blocks</b>'};
-  window.onload = function() {
-    var supportedlangs = "fr,en";
-    var userlang = (navigator.userLanguage||navigator.language).substr(0,2);
-    var ifmatch = new RegExp(userlang)
-    if (ifmatch) {
-      switch (userlang) {
-        case 'fr':
-          window.location.href = window.location.href.replace("index.htm","")+"/fr/index.htm";
-      }
-    }
-  }
   </script>
   <p id="result"></p>
   </body>
