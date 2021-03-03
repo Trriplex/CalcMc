@@ -1,9 +1,11 @@
 body {
+  color: #a5abb8;
+  background-color: #3b4254;
   font-family: sans-serif;
   margin: 5px;
 }
 h1 + h2 {
-  color: gray;
+  color: #71777d;
   font-style: italic;
 }
 div > h2 {
@@ -51,6 +53,17 @@ input {
   height: 30px;
 }
 button, input {
-  border: 2px solid #000;
+  border: 2px solid #303643;
+  border-radius: 4px;
+  background-color: #2e3440;
   width: 200px;
+  color: #a5abb8;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
