@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Stronghold Finder - Find Minecraft Strongholds using 2 ender eyes or less !</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<meta name="theme-color" content="#1e6bb8">
+	<meta property="og:site_name" content="Stronghold Finder">
+	<meta property="og:title" content="Stronghold Finder ">
+	<meta property="og:url" content="https://trriplex.github.io/StrongholdFinder.html">
+	<meta property="og:description" content="Find Minecraft Strongholds using 2 ender eyes or less !" />
+</head>
+<body>
+	<!-- Color scheme used: nord -->
+	<h1>Stronghold Finder</h1>
+	<h2><i>Find Strongholds using 2 ender eyes or less !</i></h2>
+	<center>Sounds confusign ? Watch the tutorial <a href="#">here</a> (Coming soon)</center>
+	<main>
+	<div class="left">
+		<h2>Throw #1</h2>
+		Enter <b>X coordinates</b>: <input type="number" id="x1"><br><br>
+		Enter <b>Z coordinate</b>: <input type="number" id="y1"><br><br>
+		Enter the <b>Angle</b>: <input type="number" id="a">
+	</div>
+	<div class="right">
+		<h2>Throw #2</h2>
+		Enter <b>X coordinates</b>: <input type="number" id="x2"><br><br>
+		Enter <b>Z coordinate</b>: <input type="number" id="y2"><br><br>
+		Enter the <b>Angle</b>: <input type="number" id="b">
+	</div>
+	</main>
+	<div class="btn"><button onclick="calc()">Estimate</button></div>
+	<p id="t"></p>
+	<script>
+	function calc() {
+		let x1 = Number(document.getElementById("x1").value);
+		let y1 = -Number(document.getElementById("y1").value);
+		let a = Number(document.getElementById("a").value);
+		let x2 = Number(document.getElementById("x2").value);
+		let y2 = -Number(document.getElementById("y2").value);
+		let b = Number(document.getElementById("b").value);
+
+		a = (((270 - a) % 360)*Math.PI/180);
+		b = (((270 - b) % 360)*Math.PI/180);
+
+		//if (a == 0) a = 0.1;
+
+		console.log(a, b);
+		var t = (y1-y2-Math.tan(a)*(x1-x2))/(Math.sin(b-a)/Math.cos(a));
+		// TODO: Fix the division by zero error
+		var x = Math.round(x2 + Math.cos(b)*t);
+		var y = -Math.round(y2 + Math.sin(b)*t);
+
+		document.getElementById("t").innerHTML = "The strongold's coordinates are x="+x+", and z="+y;
+	}
+	</script>
+</body>
+</html>
